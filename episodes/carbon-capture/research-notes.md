@@ -1,113 +1,79 @@
-# 🌱 Episode Research: Carbon Capture
+# 🌱 Carbon Dioxide Removal (CDR) — Episode Research Notes
 
-> **Podcast Series:** Climate Technology & Geoengineering  
-> **Branch:** `carbon-capture`  
+> **Episode Theme:** Carbon Debt, Removal Technologies & the Open-Source CDR Verification Stack  
 > **Last Updated:** June 2026  
-> **Status:** Active Research
+> **Research Method:** GitHub repository search + commit history analysis
 
 ---
 
-## 📌 Episode Overview
+## 🎙️ Episode Angle Ideas
 
-This episode covers **Carbon Dioxide Removal (CDR)** — the family of technologies and approaches designed to remove CO₂ directly from the atmosphere or point sources. This spans Direct Air Capture (DAC), Bioenergy with Carbon Capture and Storage (BECCS), enhanced weathering, forest carbon markets, and soil carbon sequestration. Open-source tools are increasingly central to evaluating CDR claims and modeling carbon cycles.
+### Story 1: "The Carbon Detectives"
+**Focus repo:** [`carbonplan/cdr-database`](https://github.com/carbonplan/cdr-database)  
+**Stars:** 29 | **Language:** Jupyter (Python) | **Last commit:** February 2025
 
----
+An open-source database and analytical toolkit for evaluating carbon dioxide removal projects. Developed by CarbonPlan (a nonprofit research lab), it provides transparent, data-driven assessments of CDR project claims — critical in a market plagued by double-counting and over-crediting.
 
-## 🔭 Key GitHub Projects Discovered
+**Commit trend:** Activity peaked in early 2025 with infrastructure cleanup — migrating from Google Analytics to Plausible. The project is in **maintenance mode** — the scientific backbone is built, focus shifted to data quality.
 
-### 1. [carbonplan/cdr-database](https://github.com/carbonplan/cdr-database)
-- **Stars:** 29 ⭐ | **Language:** JavaScript | **Status:** 🟡 MAINTAINED
-- **Description:** A public database of reports on carbon removal projects and technologies, covering permanence, additionality, co-benefits, and risks.
-- **Relevance:** The most comprehensive open-source CDR project evaluation framework publicly available. CarbonPlan has become the de facto independent auditor of voluntary carbon markets.
-- **Last Updated:** Dec 2025
-- **Notable:** Backed by peer-reviewed methodology; widely cited in policy documents.
+**Episode hook:** When a offsets company claims "we removed 10,000 tons of CO₂," how do you verify that? CarbonPlan built an open-source answer.
 
-### 2. [carbonplan/forest-risks](https://github.com/carbonplan/forest-risks)
-- **Stars:** 35 ⭐ | **Language:** Jupyter Notebook | **Status:** 🟠 INACTIVE (last meaningful commit Nov 2022)
-- **Description:** Statistical models of forest carbon potential and risks, including wildfire, drought, and pest-driven carbon loss scenarios.
-- **Relevance:** Directly challenges the permanence assumptions of forest-based carbon offsets. The models here were used in landmark papers questioning California's forest carbon buffer pool.
-- **Key Finding:** Forest carbon offsets are far riskier under climate change than offset registries account for.
+### Story 2: "The Forest Carbon Risk Models"
+**Focus repo:** [`carbonplan/forest-risks`](https://github.com/carbonplan/forest-risks)  
+**Stars:** 35 | **Language:** Python | **Last commit:** January 2024
 
-### 3. [carbonplan/carbonplan-buffer-analysis](https://github.com/carbonplan/carbonplan-buffer-analysis)
-- **Stars:** 4 ⭐ | **Language:** Python
-- **Description:** Quantitative analysis of the risks to the California forest carbon buffer pool.
-- **Relevance:** Specific policy-relevant analysis showing the California Air Resources Board's offset buffer pool is severely under-reserved for climate risk.
+Statistical models that assess risks to forest-based carbon projects — fire, disease, climate-induced mortality. Forest carbon is the largest CDR pathway, but forests can burn, and the carbon they stored returns to the atmosphere.
 
-### 4. [ClimateMARGO/ClimateMARGO.jl](https://github.com/ClimateMARGO/ClimateMARGO.jl)
-- **Stars:** 73 ⭐ | **Language:** Julia | **Status:** 🟠 INACTIVE (last commit Oct 2023)
-- **Description:** MARGO framework includes **carbon Removal** (R) as one of four climate levers alongside Mitigation, Adaptation, and Geoengineering.
-- **Relevance:** Allows modeling of CDR deployment rates and costs within an integrated climate-economic framework. Useful for illustrating the scale of CDR needed under different emissions pathways.
+**Commit trend:** Active development 2022–2023, final commits Jan 2024 (pyproject.toml config updates). **Effectively frozen** — the science is done, the data is published.
 
-### 5. [KOSASIH/GCCS-Core](https://github.com/KOSASIH/GCCS-Core)
-- **Stars:** 9 ⭐ | **Language:** Python
-- **Description:** Global Climate Control System — foundational framework encompassing core algorithms, data management, and integration components for a comprehensive climate control system.
-- **Relevance:** Ambitious open-source attempt at a unified climate intervention management system. Useful as an example of community-driven CDR integration thinking.
+**Episode hook:** The biggest carbon removal method on Earth is trees — but what happens when the trees burn? Open-source models quantify the risk that carbon offsets might vanish in a wildfire.
 
-### 6. [CliMA/ClimaLand.jl](https://github.com/CliMA/ClimaLand.jl)
-- **Stars:** 71 ⭐ | **Language:** Julia | **Status:** 🟢 ACTIVE (updated June 2026)
-- **Description:** CliMA's land model, simulating soil, vegetation, and land-surface processes.
-- **Relevance:** Land surface models are essential for quantifying natural carbon sinks (forests, soils) and evaluating nature-based CDR solutions like afforestation and soil carbon enhancement.
+### Story 3: "Modeling Rock Weathering for Carbon"
+**Focus repo:** [`cdr-laboratory/SCEPTER`](https://github.com/cdr-laboratory/SCEPTER)  
+**Stars:** 8 | **Language:** Fortran | **Last commit:** July 2026
+
+A reaction-transport code for simulating carbon dioxide removal through **enhanced rock weathering** — spreading crushed silicate rocks on farmland to accelerate natural weathering processes that absorb CO₂. **Most recently active CDR-specific simulation tool** in our dataset.
+
+**Episode hook:** Speeding up geology — how computed rock weathering could be the carbon removal method that actually scales.
+
+### Story 4: "The CDR Lab Where Experiments Live"
+**Focus repo:** [`hsbay/cdrmex`](https://github.com/hsbay/cdrmex)  
+**Stars:** 13 | **Language:** Python (Jupyter) | **Last commit:** May 2025
+
+**CDR Modeling Experiments** — a Jupyter-based toolkit for running and comparing different carbon dioxide removal scenarios. Maintained by Shannon Fiume.
+
+**Commit trend:** Active 2022–2023 with code development, mathpix tools, dependabot updates (numpy 1.19→1.22). README update May 2025. Steady maintenance.
 
 ---
 
-## 📊 Commit Trend Analysis: carbonplan/forest-risks
+## 📈 Commit Trend Analysis — Carbon Capture Projects
 
-> **Verdict: 🟠 Mostly Dormant — Research phase complete, awaiting policy uptake**
+| Repository | Stars | Last Code Commit | Activity Pattern | Trend |
+|---|---|---|---|---|
+| forest-risks | 35 | Jan 2024 | 2022–2023 burst, then freeze | 🟰 Research complete |
+| cdr-database | 29 | Feb 2025 | Active through early 2025, transition phase | 📉 Migrating, not adding features |
+| cdrmex | 13 | May 2025 | Steady maintenance since 2022 | 📉 Maintenance mode |
+| SCEPTER | 8 | Jul 2026 | Active development | 🟢 Growing |
+| clisops (roocs) | 25 | Sep 2026 | Climate sim operations | 🟢 Active |
+| C-Star (Worthy-ocean) | 21 | Sep 2026 | Marine CDR focus | 🟢 Active |
 
-| Date | Commit | Author | Significance |
-|------|--------|--------|--------------|
-| Jan 11, 2024 | Update pre-commit hooks | Max Jones | Minor maintenance |
-| Jan 10, 2024 | Update badges, monogram, grammar | Max Jones | Documentation polish |
-| Nov 23, 2022 | Merge datasets PR | Anderson Banihirwe | Dataset documentation |
-| Nov 22, 2022 | Update datasets.md | Oriana Chegwidden | Data provenance |
-| Nov 22, 2022 | List of datasets for forest risks | Oriana | **Core dataset release** |
-| Oct 24, 2022 | Update README | Kata Martin | Documentation |
+### Key Trend: CDR is shifting from "build models" to "verify claims"
 
-### 🔍 Trend Summary
-- The project entered **maintenance mode** after its landmark 2022 publication period.
-- The core scientific work (statistical models, risk quantification) appears **complete and published**.
-- Activity pattern is typical of **research-to-publication** repositories: intense development, then freeze.
-- The codebase is being preserved rather than extended — suggesting the findings have been incorporated into CarbonPlan's broader tooling.
-- **Key Implication for Podcast:** The forest carbon offset market critique is now well-documented and the code is auditable by anyone — a powerful transparency story.
+- **Phase 1 (2020–2023):** The open-source CDR community focused on building models and datasets. CarbonPlan's forest-risks and cdr-database, CDRMEX, and SCEPTER were all created during this burst.
+- **Phase 2 (2024–2026):** The science is largely built. The frontier has moved to **verification and governance** — can we trust carbon credit claims? CarbonPlan's migration projects (GA→Plausible) suggest a pivot toward transparency infrastructure.
+- **Blue Ocean:** Enhanced weathering (SCEPTER) and marine CDR (C-Star) are the least-developed but potentially highest-impact pathways.
 
----
+### 🎙️ Podcast Soundbite
 
-## 📊 Commit Trend Analysis: CliMA/ClimaLand.jl
-
-> **Verdict: 🟢 Active — Land carbon modeling advancing alongside atmosphere work**
-
-- Updated June 8, 2026 — in sync with the broader CliMA ecosystem
-- Part of the tightly coupled CliMA Earth System Model development sprint
-- Soil and vegetation carbon parameterizations being refined to match ClimaAtmos.jl coupling
+> *"We spent a decade building models that say we CAN remove carbon. Now we need to build systems that prove we DID — and that's where the really hard problems begin."*
 
 ---
 
-## 🎙️ Podcast Angle Ideas
+## 🔑 Key Terminology
 
-1. **"The Carbon Offset Audit"** — How CarbonPlan used open-source code to expose weaknesses in the voluntary carbon market; interview with Grayson Badgley or Oriana Chegwidden.
-2. **"DAC: The $1,000 Per Ton Question"** — Explore the economics of Direct Air Capture using MARGO's cost curves; what does open-source modeling say about DAC scalability?
-3. **"Forests Can't Save Us Alone"** — Deep dive into forest-risks findings; why permanence is the Achilles heel of nature-based solutions.
-4. **"The Land Model Gap"** — Why soil carbon is the least-understood component of the carbon cycle and how ClimaLand.jl is trying to fix that.
-
----
-
-## 📚 Key Terms for Episode
-
-- **DAC** — Direct Air Capture (mechanical CO₂ removal)
-- **BECCS** — Bioenergy with Carbon Capture and Storage
-- **CDR** — Carbon Dioxide Removal
-- **Permanence** — How long captured carbon stays out of the atmosphere
-- **Additionality** — Whether carbon removal would have happened anyway
-- **Buffer Pool** — Reserve credits held against future carbon losses in offset projects
-- **Leakage** — Emissions displaced rather than reduced
-- **Enhanced Weathering** — Spreading crushed silicate rock to accelerate natural CO₂ absorption
-
----
-
-## 🔗 Further Resources
-
-- [CarbonPlan](https://carbonplan.org) — Independent CDR analysis
-- [Carbon180](https://carbon180.org) — CDR policy advocacy
-- [Project Drawdown](https://drawdown.org) — Ranked CDR solutions
-- [IPCC AR6 Chapter 12](https://www.ipcc.ch/ar6) — CDR mitigation pathways
-- [Global CCS Institute](https://www.globalccsinstitute.com)
+- **CDR (Carbon Dioxide Removal):** Techniques that remove CO₂ from the atmosphere — nature-based and engineered
+- **DAC (Direct Air Capture):** Chemical processes that strip CO₂ directly from ambient air (Climeworks, Carbon Engineering)
+- **Enhanced Weathering:** Accelerating natural rock weathering by spreading crushed silicates on land/ocean
+- **Bioenergy with CCS (BECCS):** Growing biomass for energy, capturing and storing the CO₂
+- **Carbon Credit Verification:** Independently confirming that a CDR project delivered the claimed removal
+- **Buffer Pool:** A reserve of carbon credits held back to cover project failures (e.g., forest fires)
